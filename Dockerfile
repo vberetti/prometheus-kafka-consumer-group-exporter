@@ -17,3 +17,5 @@ ADD . $GOPATH/src/prometheus-kafka-consumer-group-exporter
 RUN cd $GOPATH/src/prometheus-kafka-consumer-group-exporter \
   && go get . \
   && go build -o prometheus-kafka-consumer-group-exporter .
+
+CMD ["/go/bin/prometheus-kafka-consumer-group-exporter", "--consumer-group-command-path $KAFKA_HOME/bin/kafka-consumer-groups.sh",  "kafka"]
