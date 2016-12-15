@@ -20,4 +20,4 @@ RUN cd $GOPATH/src/prometheus-kafka-consumer-group-exporter \
 
 ENV KAFKA_URL kafka:9092
 
-CMD ["/src/prometheus-kafka-consumer-group-exporter/startup.sh"]
+CMD ["/go/src/prometheus-kafka-consumer-group-exporter/startup.sh"]
